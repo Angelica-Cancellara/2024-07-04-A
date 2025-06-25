@@ -48,6 +48,15 @@ class Model:
         return conn[0]
 
 
+    #SE GLI ARCHI FOSSERO PESATI
+    # def get_top_edges(self):
+    #     '''stampare i 5 archi di peso maggiore, ordinati in oridne decrescente di peso, per ognuno di questi 5 archi stampare
+    #     l'id del nodo di origine, l'id del nodo di destinazione ed il peso'''
+    #     sorted_edges = sorted(self._graph.edges(data=True), key=lambda edge: edge[2].get('weight'), reverse=True)
+    #     return sorted_edges[0:5]
+
 #su grafi NON orientati --> COMPONENTE CONNESSA: nx.connected_components(self._graph)
 #su grafi orientati --> COMPONENTE DEBOLMENTE CONNESSA: nx.weakly_connected_components(self._graph)
 #su grafi orientati --> COMPONENTE FORTEMENTE CONNESSA: nx.strongly_connected_components(self._graph)
+
+

@@ -35,6 +35,13 @@ class Controller:
         for c in connessa:
             self._view.txt_result1.controls.append(ft.Text(c))
 
+        # SE GLI ARCHI FOSSERO PESATI
+        #STAMPA NODI MAGGIORI
+        # self._view.txt_result1.controls.append(ft.Text(f"I 5 archi di peso maggiore sono:"))
+        # top_edges = self._model.get_top_edges()
+        # for edge in top_edges:
+        #     self._view.txt_result1.controls.append(
+        #         ft.Text(f"{edge[0].id} -> {edge[1].id} | weight = {edge[2]['weight']}"))
 
         self._view.btn_path.disabled = False
 

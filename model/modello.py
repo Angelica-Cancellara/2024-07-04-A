@@ -126,3 +126,18 @@ class Model:
             if cammino[i].datetime.month == cammino[i - 1].datetime.month:
                 score += 200
         return score
+
+    # def ricorsione(parziale, livello):
+    #     if condizione_di_terminazione(parziale):
+    #         # valutazione della soluzione
+    #         if è_migliore(parziale):
+    #             salva_migliore(parziale)
+    #         return
+    #
+    #     for scelta in possibili_scelte(livello, parziale):
+    #         if è_ammissibile(scelta, parziale):
+    #             parziale.append(scelta)  # FASE 1: aggiungo
+    #             aggiorna_stato(scelta, +1)  # opzionale: es. conteggi
+    #             ricorsione(parziale, livello + 1)  # FASE 2: ricorsione
+    #             aggiorna_stato(scelta, -1)  # opzionale: backtracking
+    #             parziale.pop()  # FASE 3: backtracking

@@ -47,8 +47,16 @@ class Controller:
 
         self._view.update_page()
 
-    def handle_path(self, e):
-        pass
+    def handle_path(self, e): #SECONDA PARTE
+        self._view.txt_result2.controls.clear()
+
+        path, punteggio = self._model.cammino_ottimo()
+        self._view.txt_result2.controls.append(ft.Text(f"Il punteggio del percorso ottimo è {punteggio}"))
+        self._view.txt_result2.controls.append(ft.Text(f"Il percorso ottimo è costituito da {len(path)} nodi:"))
+        for p in path:
+            self._view.txt_result2.controls.append(ft.Text(f"{p} | {p.shape} | {p.state} | {p.duration}"))
+
+        self._view.update_page()
 
     def fillDDAnno(self):
         for a in self._model.getAnni():

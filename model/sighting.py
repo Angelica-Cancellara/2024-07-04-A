@@ -1,11 +1,13 @@
 from dataclasses import dataclass
 from datetime import datetime as dtime
 
+import datetime
+
 
 @dataclass
 class Sighting:
     id: int
-    datetime: dtime
+    datetime: datetime
     city: str
     state: str
     country: str
@@ -13,7 +15,7 @@ class Sighting:
     duration: int
     duration_hm: str
     comments: str
-    date_posted: dtime
+    date_posted: datetime
     latitude: float
     longitude: float
 
